@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import userRoutes from './routes/userRoutes.js';
 import connectDB from './config/db.js';
+import providerRoutes from './routes/providerRoutes.js';
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ connectDB();
 
 // User Routes
 app.use('/api/users', userRoutes);
+app.use('/api/providers', providerRoutes);
 
 // Start the server
 const PORT = process.env.PORT;
